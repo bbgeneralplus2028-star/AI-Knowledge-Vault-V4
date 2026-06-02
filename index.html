@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AI Knowledge Vault V4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="manifest" href="manifest.json">
+
+<style>
+body { margin:0; font-family:Arial; background:#0b1220; color:white; }
+
+header {
+  padding:15px;
+  text-align:center;
+  background:#111827;
+  font-weight:bold;
+}
+
+button {
+  margin:5px;
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  background:#1f2937;
+  color:white;
+}
+
+textarea {
+  width:95%;
+  height:140px;
+  margin:10px;
+}
+
+video {
+  width:100%;
+  border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>AI Knowledge Vault V4 — Autonomous AI Brain</header>
+
+<div>
+<button onclick="startCamera()">Camera</button>
+<button onclick="scanFrame()">Scan</button>
+<button onclick="uploadFiles()">Upload</button>
+<button onclick="startVoice()">Voice</button>
+<button onclick="exportBook()">Export Book</button>
+</div>
+
+<video id="video" autoplay></video>
+
+<textarea id="output" placeholder="AI processed knowledge will appear here..."></textarea>
+
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+
+<script src="ocr.js"></script>
+<script src="brain.js"></script>
+<script src="knowledge-graph.js"></script>
+<script src="ai-engine.js"></script>
+<script src="voice.js"></script>
+<script src="ebook.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
