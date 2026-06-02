@@ -2,20 +2,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>AI Knowledge Vault V4</title>
+<title>AI Knowledge Vault V5</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="manifest" href="manifest.json">
 
 <style>
 body { margin:0; font-family:Arial; background:#0b1220; color:white; }
-
-header {
-  padding:15px;
-  text-align:center;
-  background:#111827;
-  font-weight:bold;
-}
+header { padding:15px; text-align:center; background:#111827; }
 
 button {
   margin:5px;
@@ -26,43 +18,41 @@ button {
   color:white;
 }
 
-textarea {
-  width:95%;
-  height:140px;
-  margin:10px;
-}
+textarea { width:95%; height:120px; margin:10px; }
 
-video {
-  width:100%;
-  border-radius:10px;
-}
+video { width:100%; }
+#chatBox { padding:10px; white-space:pre-wrap; }
 </style>
 </head>
 
 <body>
 
-<header>AI Knowledge Vault V4 — Autonomous AI Brain</header>
+<header>AI Knowledge Vault V5 — GPT Intelligence System</header>
 
 <div>
 <button onclick="startCamera()">Camera</button>
 <button onclick="scanFrame()">Scan</button>
 <button onclick="uploadFiles()">Upload</button>
+<button onclick="summarize()">AI Summary</button>
 <button onclick="startVoice()">Voice</button>
-<button onclick="exportBook()">Export Book</button>
 </div>
 
 <video id="video" autoplay></video>
 
-<textarea id="output" placeholder="AI processed knowledge will appear here..."></textarea>
+<textarea id="output" placeholder="Document text..."></textarea>
+
+<input id="chatInput" placeholder="Ask your documents..." style="width:95%;margin:10px;">
+<button onclick="askChat()">Ask GPT</button>
+
+<div id="chatBox"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 
+<script src="gpt.js"></script>
 <script src="ocr.js"></script>
 <script src="brain.js"></script>
-<script src="knowledge-graph.js"></script>
-<script src="ai-engine.js"></script>
-<script src="voice.js"></script>
-<script src="ebook.js"></script>
+<script src="ai.js"></script>
+<script src="chat.js"></script>
 <script src="app.js"></script>
 
 </body>
